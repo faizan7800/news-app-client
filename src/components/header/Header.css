@@ -1,0 +1,344 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+/* for navigation */
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* border: 2px solid red; */
+  position: sticky;
+  left: 0px;
+  top: 0px;
+  background-color: rgb(236, 238, 239);
+  z-index: 1;
+}
+.logo {
+  display: flex;
+  align-items: center;
+}
+.logo img {
+  width: 15rem;
+  cursor: pointer;
+}
+.input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.input input {
+  width: 30rem;
+  padding: 0.7rem;
+  border-radius: 0.3rem;
+  outline: none;
+  border: none;
+}
+.input .MuiSvgIcon-root {
+  margin-left: -30px;
+}
+.Ltst-news {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.Ltst-news button {
+  width: 12rem;
+  padding: 0.5rem;
+  margin-left: 0rem;
+  background: transparent;
+  text-align: left;
+  border-radius: 0.3rem;
+  font-family: "Ubuntu", sans-serif;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.user {
+  width: 10rem;
+  padding: 0.7rem;
+  margin-right: 1rem;
+  display: flex;
+  justify-content: space-evenly;
+  font-family: "Ubuntu", sans-serif;
+  align-items: center;
+}
+.user .guest-icon {
+  cursor: pointer;
+}
+.user .down-arrow-icon {
+  cursor: pointer;
+}
+.menu {
+  display: none;
+}
+.hamburger__closeIcon .MuiSvgIcon-root {
+  margin-left: 6px;
+}
+.hamburger__content {
+  padding: 4px 8px;
+}
+.hamburger__content h3 {
+  color: #17a8e3;
+}
+.hamburger__input {
+  display: flex;
+  align-items: center;
+  margin: 0.7rem 0px;
+}
+.hamburger__input input {
+  padding: 0.4rem 0.8rem;
+  border: 1px solid rgb(206, 200, 200);
+}
+.hamburger__input .MuiSvgIcon-root {
+  margin-left: -1.3rem;
+}
+.hamburger__dlMode {
+  height: 10rem;
+  width: 12rem !important;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 2rem !important;
+  height: 2.5rem;
+  outline: none;
+  border-radius: 0.5rem;
+  background-color: rgb(217, 218, 218);
+  /* border: 2px solid red; */
+}
+.hamburger__dlMode .lg {
+  display: flex;
+  align-items: center;
+  line-height: 1.7rem;
+  width: 5rem;
+  text-align: center;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  background-color: white;
+}
+.lg-icon {
+  margin-right: 0.5rem;
+}
+.hamburger__dlMode .bj {
+  display: flex;
+  align-items: center;
+  width: 5rem;
+  text-align: center;
+  line-height: 1.7rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  background-color: rgb(181, 185, 185);
+}
+.bj-icon {
+  margin-right: 0.5rem;
+}
+.hamburger__content li {
+  margin: 4px 0px;
+  padding: 8px 0px;
+  padding-left: 8px;
+  border-top-right-radius: 10px;
+  color: white;
+  font-weight: 700;
+  background-color: #17a9e38c;
+}
+
+/* for navigation responsivness */
+@media only screen and (max-width: 350px) {
+  .navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* border: 2px solid red; */
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  .logo img {
+    width: 12rem;
+    padding: 15px 0px;
+    cursor: pointer;
+    /* border: 2px solid red; */
+  }
+  .input {
+    display: flex;
+    align-items: center;
+    display: none;
+  }
+  .Ltst-news {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    display: none;
+  }
+  .user {
+    width: 10rem;
+    padding: 0.7rem;
+    margin-right: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    font-family: "Ubuntu", sans-serif;
+    align-items: center;
+    display: none;
+  }
+  .menu {
+    display: block;
+    padding: 0px 2px;
+  }
+}
+
+/* responsivness like tablets and ipads */
+@media only screen and (min-width: 351px) and (max-width: 600px) {
+  .navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  .logo img {
+    width: 12.5rem;
+    cursor: pointer;
+  }
+  .input {
+    display: flex;
+    align-items: center;
+    display: none;
+  }
+  .Ltst-news {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    display: none;
+  }
+  .user {
+    width: 7rem;
+    padding: 0.7rem;
+    margin-right: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    font-family: "Ubuntu", sans-serif;
+    align-items: center;
+    position: relative;
+    left: 2rem;
+  }
+  .user .guest-icon {
+    cursor: pointer;
+  }
+  .user .down-arrow-icon {
+    cursor: pointer;
+  }
+  .menu {
+    display: block;
+    padding: 0px 2px;
+  }
+}
+/* responsiveness for intermediate screens */
+@media only screen and (min-width: 601px) and (max-width: 1000px) {
+  .hamburger {
+    display: none !important;
+  }
+  .navbar {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  .logo img {
+    width: 13rem;
+    cursor: pointer;
+  }
+  .input {
+    display: flex;
+    align-items: center;
+    width: 15.2rem;
+    display: block;
+  }
+  .input input {
+    width: 15rem;
+    padding: 0.7rem;
+    border-radius: 0.3rem;
+    outline: none;
+    border: none;
+  }
+  .input .MuiSvgIcon-root {
+    margin-left: -30px;
+  }
+  .Ltst-news {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    display: none;
+  }
+  .user {
+    width: 5rem;
+    padding: 0.7rem;
+    margin-right: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    font-family: "Ubuntu", sans-serif;
+    align-items: center;
+    position: relative;
+    left: 2rem;
+  }
+  .user .guest-icon {
+    cursor: pointer;
+  }
+  .user .down-arrow-icon {
+    cursor: pointer;
+  }
+}
+/* responsiveness for large screens */
+@media only screen and (min-width: 1000px) {
+  .hamburger {
+    display: none !important;
+  }
+  .navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  .logo img {
+    width: 15rem;
+    cursor: pointer;
+  }
+  .Ltst-news {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .Ltst-news button {
+    width: 10rem;
+    padding: 0.5rem;
+    margin-left: 1rem;
+    background: transparent;
+    text-align: left;
+    border-radius: 0.3rem;
+    font-family: "Ubuntu", sans-serif;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.logout {
+  background-color: rgb(30, 144, 255);
+  color: white;
+  border: none;
+  padding: 2px;
+  text-align: center;
+  font-weight: bold;
+}
