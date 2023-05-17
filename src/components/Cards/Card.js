@@ -5,6 +5,7 @@ import ThumbUpAltIcon from "@mui/icons-material/ThumbUpAlt";
 import ChatBubbleOutlineIcon from "@mui/icons-material/ChatBubbleOutline";
 import ShareIcon from "@mui/icons-material/Share";
 function Card({ title, desc, imgUrl, urlToNews, toggleMode }) {
+  const getNews = (e, url) => {};
   return (
     <>
       <div
@@ -28,7 +29,10 @@ function Card({ title, desc, imgUrl, urlToNews, toggleMode }) {
           >
             Read
           </a>
-          <BookmarkBorderIcon className="save" />
+          <BookmarkBorderIcon
+            className="save"
+            onClick={(e) => getNews(e, urlToNews)}
+          />
         </div>
         <div className="tit-des-img">
           <h4>{title.substr(0, 40) + "..."}</h4>

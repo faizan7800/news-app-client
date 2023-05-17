@@ -128,7 +128,7 @@ function Signup() {
               className="btn1"
               value="Sign Up"
             />
-            <Link to="/">
+            <Link to="/login">
               <button className="btn2">
                 Go to Login
                 <ArrowForwardIcon className="cr" />

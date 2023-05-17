@@ -16,7 +16,7 @@ import LocalHospitalIcon from "@mui/icons-material/LocalHospital";
 import PsychologyIcon from "@mui/icons-material/Psychology";
 import FiveGIcon from "@mui/icons-material/FiveG";
 import WorkIcon from "@mui/icons-material/Work";
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import Card from "../Cards/Card";
 import { useState } from "react";
 import Header from "../header/Header";
@@ -36,7 +36,6 @@ function Sidebar({
       setToggleMode(true);
     }
   };
-
   return (
     <>
       <div className="side-cards">
@@ -115,6 +114,8 @@ function Sidebar({
           </div>
         </div>
         {/* -----------------for stories -----------*/}
+
+        <Outlet />
         <div
           className="cards"
           style={
@@ -127,34 +128,76 @@ function Sidebar({
             Top Stories - {category.toUpperCase()}
           </h2>
           <TopStoriesDiv colorMode={toggleMode} className="top-stories-list">
-            <li className="all">All</li>
+            <li className="all toggle-color">All</li>
             <Link to="/general">
-              <li>
+              <li
+                className="toggle-color"
+                style={
+                  category === "general"
+                    ? { backgroundColor: "#42BCFF", color: "white" }
+                    : { backgroundColor: "#FFFFFF", color: "black" }
+                }
+              >
                 General <NewspaperIcon className="fi" fontSize="small" />
               </li>
             </Link>
             <Link to="/sports">
-              <li>
+              <li
+                className="toggle-color"
+                style={
+                  category === "sports"
+                    ? { backgroundColor: "#42BCFF", color: "white" }
+                    : { backgroundColor: "#FFFFFF", color: "black" }
+                }
+              >
                 Sports <SportsCricketIcon className="fi" fontSize="small" />
               </li>
             </Link>
             <Link to="/health">
-              <li>
+              <li
+                className="toggle-color"
+                style={
+                  category === "health"
+                    ? { backgroundColor: "#42BCFF", color: "white" }
+                    : { backgroundColor: "#FFFFFF", color: "black" }
+                }
+              >
                 Health <LocalHospitalIcon className="fi" fontSize="small" />
               </li>
             </Link>
             <Link to="/science">
-              <li>
+              <li
+                className="toggle-color"
+                style={
+                  category === "science"
+                    ? { backgroundColor: "#42BCFF", color: "white" }
+                    : { backgroundColor: "#FFFFFF", color: "black" }
+                }
+              >
                 Science <PsychologyIcon className="fi" fontSize="small" />
               </li>
             </Link>
             <Link to="/technology">
-              <li>
+              <li
+                className="toggle-color"
+                style={
+                  category === "technology"
+                    ? { backgroundColor: "#42BCFF", color: "white" }
+                    : { backgroundColor: "#FFFFFF", color: "black" }
+                }
+              >
                 Technology <FiveGIcon className="fi" fontSize="small" />
               </li>
             </Link>
             <Link to="/business">
-              <li>
+              <li
+                className="toggle-color"
+                style={
+                  category === "business"
+                    ? { backgroundColor: "#42BCFF", color: "white" }
+                    : { backgroundColor: "#FFFFFF", color: "black" }
+                }
+              >
                 Business <WorkIcon className="fi" fontSize="small" />
               </li>
             </Link>
@@ -204,6 +247,9 @@ const TopStoriesDiv = styled.div`
     background-color: ${(props) => (props.colorMode ? "#C5E2EA" : "white")};
     text-align: center;
     cursor: pointer;
+  }
+  .toggle-color {
+    // background: ${(props) => (props.categoryColor ? "#42BCFF" : "#C5E2EA")};
   }
 `;
 

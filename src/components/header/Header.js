@@ -107,7 +107,7 @@ function Header({ username, category, toggleMode, setToggleMode }) {
               <ExpandMoreIcon
                 style={toggleMode ? { color: "white" } : { color: "black" }}
               />
-              <Link to="/login">
+              <Link to="/about">
                 <button
                   className="logout"
                   style={
@@ -116,7 +116,7 @@ function Header({ username, category, toggleMode, setToggleMode }) {
                       : { background: "#1E90FF" }
                   }
                 >
-                  Login
+                  About
                 </button>
               </Link>
             </div>
@@ -178,7 +178,7 @@ function Header({ username, category, toggleMode, setToggleMode }) {
       </nav>
       <Sidebar
         username={username}
-        category="general"
+        category={category}
         toggleMode={toggleMode}
         setToggleMode={setToggleMode}
         newsArticles={newsArticles}

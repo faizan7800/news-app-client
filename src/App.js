@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { auth } from "./firebase";
 import About from "./components/About/About";
+import PageNotFound from "./components/PageNotFound";
 function App() {
   const [username, setUserame] = useState("");
   const [toggleMode, setToggleMode] = useState(false);
@@ -44,6 +45,14 @@ function App() {
             element={
               <>
                 <About />
+              </>
+            }
+          />
+          <Route
+            path="/pagenotfound"
+            element={
+              <>
+                <PageNotFound />
               </>
             }
           />
